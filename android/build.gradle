@@ -3,6 +3,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -30,3 +31,5 @@ subprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
