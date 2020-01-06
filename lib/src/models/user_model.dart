@@ -32,6 +32,15 @@ class UserModel extends Model{
     });
   }
 
+  void signInFace(bool isLoggedIn, FirebaseUser user){
+    isLoading = true;
+    notifyListeners();
+
+    firebaseUser = user;
+    isLoading = false;
+    notifyListeners();
+  }
+
   void signIn({@required String email, @required String pass, @required VoidCallback onSucess, @required VoidCallback onFail}) async{
     isLoading = true;
     notifyListeners();
